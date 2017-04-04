@@ -24,5 +24,11 @@ namespace CS3280_GroupProject
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window nWindow = new SearchWindow();
+            nWindow.Show();
+        }
     }
 }
