@@ -59,6 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceManager.cs" />
     <Compile Include="SearchQueryManager.cs" />
     <Compile Include="SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
