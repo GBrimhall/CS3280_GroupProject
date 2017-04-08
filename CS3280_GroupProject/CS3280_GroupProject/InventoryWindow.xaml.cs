@@ -40,7 +40,7 @@ namespace CS3280_GroupProject
         /// <returns></returns>
         private void btnUpdate_Click_1(object sender, RoutedEventArgs e)
         {
-            Query_Data.ItemsSource = invQueryManager.getItemData();
+            
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace CS3280_GroupProject
         private void btnDeleteItem_Click(object sender, RoutedEventArgs e)
         {
             // Need to add/change item description and cost
-            invQueryManager.addDeleteData();
+            
         }
 
 

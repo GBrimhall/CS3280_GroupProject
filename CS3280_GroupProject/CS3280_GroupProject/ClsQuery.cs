@@ -164,8 +164,7 @@ namespace CS3280_GroupProject
 
         public static string deleteItem(string itemCode)
         {
-            return String.Format("DELETE FROM ItemDesc WHERE ItemCode = '{0}';", 
-                );
+            return String.Format("DELETE FROM ItemDesc WHERE ItemCode = '{0}';", itemCode);
         }
         #endregion
     }

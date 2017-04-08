@@ -36,7 +36,13 @@ C:\Users\AleYBen\Downloads\CS3280_GroupProject-master (1)\CS3280_GroupProject-ma
 C:\Users\AleYBen\Downloads\CS3280_GroupProject-master (1)\CS3280_GroupProject-master\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.csproj.GenerateResource.Cache
 C:\Users\AleYBen\Downloads\CS3280_GroupProject-master (1)\CS3280_GroupProject-master\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\InventoryWindow.g.cs
 C:\Users\AleYBen\Downloads\CS3280_GroupProject-master (1)\CS3280_GroupProject-master\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\InventoryWindow.baml
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe.config
+C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.exe
+C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.pdb
+C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\Invoice.mdb
+C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe.config
+C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe
+C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.pdb
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\InventoryWindow.g.cs
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\MainWindow.g.cs
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\SearchWindow.g.cs
@@ -44,18 +50,11 @@ C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject_Content.g.cs
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject_MarkupCompile.cache
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject_MarkupCompile.lref
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.exe
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.pdb
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\Invoice.mdb
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe.config
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe
-C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.pdb
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\InventoryWindow.baml
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\MainWindow.baml
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\SearchWindow.baml
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.g.resources
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.Properties.Resources.resources
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.csproj.GenerateResource.Cache
-C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe.config
-C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.exe
-C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.pdb
+C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.exe
+C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.pdb
