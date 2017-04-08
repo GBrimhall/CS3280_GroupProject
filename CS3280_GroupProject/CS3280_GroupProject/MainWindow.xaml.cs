@@ -66,6 +66,8 @@ namespace CS3280_GroupProject
         private void btn_Search_Click(object sender, RoutedEventArgs e)
         {
             //Open Search Window
+            SearchWindow sw = new SearchWindow();
+            sw.Show();
 
             //On Search Window close check for returned invoice
 

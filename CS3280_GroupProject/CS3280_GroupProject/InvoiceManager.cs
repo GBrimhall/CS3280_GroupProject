@@ -89,12 +89,12 @@ namespace CS3280_GroupProject
                 //Make connection to database
 
                 //Save invoice
-                string sSQL = String.Format("INSERT INTO Invoices (InvoiceNum, InvoiceDate, TotalCharge) VALUES ({0}, {1}, {2})", 
-                    invoiceNum, invoiceDate, invoiceTotal);
+                //string sSQL = String.Format("INSERT INTO Invoices (InvoiceNum, InvoiceDate, TotalCharge) VALUES ({0}, {1}, {2})", 
+                    //invoiceNum, invoiceDate, invoiceTotal);
 
                 //Save line items
-                sSQL = String.Format("INSERT INTO LineItems (InvoiceNum, LineItemNum, ItemCode) VALUES ({0}, {1}, {2})",
-                                    invoiceNum, lineNum, itemCode);
+                //sSQL = String.Format("INSERT INTO LineItems (InvoiceNum, LineItemNum, ItemCode) VALUES ({0}, {1}, {2})",
+                                    //invoiceNum, lineNum, itemCode);
 
             }
             catch (Exception ex)
@@ -164,7 +164,6 @@ namespace CS3280_GroupProject
                 //Make connection to database
 
                 //Get item
-                string sSQL = String.Format("SELECT * FROM LineItems WHERE ItemCode = '{0}'", itemCode);
 
                 //Return item data as dataset
                 return null;
