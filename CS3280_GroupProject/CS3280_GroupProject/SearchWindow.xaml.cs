@@ -23,7 +23,7 @@ namespace CS3280_GroupProject
     public partial class SearchWindow : Window
     {
         #region Private Class Variables
-        private SearchQueryManager searchQueryManager;
+        private SearchManager searchQueryManager;
         #endregion
 
 
@@ -36,7 +36,7 @@ namespace CS3280_GroupProject
 
             #region Init. Class Variables
             //Setup Search Query Manager
-            searchQueryManager = new SearchQueryManager();
+            searchQueryManager = new SearchManager();
             #endregion  
 
             //Test Setup

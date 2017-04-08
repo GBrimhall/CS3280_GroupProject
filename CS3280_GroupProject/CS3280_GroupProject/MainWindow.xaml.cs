@@ -82,6 +82,8 @@ namespace CS3280_GroupProject
         private void btn_EditInventory_Click(object sender, RoutedEventArgs e)
         {
             // Open the inventory management window
+            InventoryWindow iw = new InventoryWindow();
+            iw.Show();
 
             //Once inventory management window is closed update item's drop down
         }

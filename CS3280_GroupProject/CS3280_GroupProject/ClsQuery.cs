@@ -112,6 +112,42 @@ namespace CS3280_GroupProject
 
         #endregion
 
+        #region Search Window Queries
+        public static string filterDate(string invoiceDate)
+        {
+            return String.Format("SELECT * FROM INVOICES WHERE InvoiceDate = '{0}';", 
+                invoiceDate);
+        }
+
+        public static string filterTotal(string total)
+        {
+            return String.Format("SELECT * FROM INVOICES WHERE TotalCharge = '{0}':", 
+                total);
+        }
+
+        public static string filterInvoiceNum(string invoiceNum)
+        {
+            return String.Format("SELECT * FROM INVOICES WHERE InvoiceNum = '{0}';", 
+                invoiceNum);
+        }
+
+        public static string getDateOptions()
+        {
+            return String.Format("SELECT InvoiceDate FROM INVOICES;");
+        }
+
+        public static string getTotalOptions()
+        {
+            return String.Format("SELECT TotalCharge FROM INVOICES;");
+        }
+
+        public static string getInvoiceOptions()
+        {
+            return String.Format("SELECT InvoiceNum FROM INVOICE;");
+        }
+
+        #endregion
+
         /// <summary>
         /// This SQL gets all data on an invoice for a given InvoiceID.
         /// </summary>
