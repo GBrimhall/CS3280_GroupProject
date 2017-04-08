@@ -56,3 +56,6 @@ C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.g.resources
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.Properties.Resources.resources
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.csproj.GenerateResource.Cache
+C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\bin\Debug\CS3280_GroupProject.exe.config
+C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.exe
+C:\Users\Michael\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.pdb

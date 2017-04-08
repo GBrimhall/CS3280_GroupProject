@@ -1,17 +1,43 @@
-<Window x:Class="CS3280_GroupProject.InventoryWindow"
+<Window x:Name="winInventory" x:Class="CS3280_GroupProject.InventoryWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CS3280_GroupProject"
         mc:Ignorable="d"
-        Title="Inventory Window" Height="350" Width="525">
+        Title="Inventory Window" Height="504.011" Width="643.105" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid RenderTransformOrigin="0.498,0.504">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="432*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="433*"/>
+        </Grid.ColumnDefinitions>
 
-        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="35,40,0,0" VerticalAlignment="Top" Width="114" Click="btnUpdate_Click"/>
-        <Button x:Name="btnAddDelete" Content="Add/Delete" HorizontalAlignment="Left" Margin="210,41,0,0" VerticalAlignment="Top" Width="118" Click="btnAddDelete_Click_1"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="398,40,0,0" VerticalAlignment="Top" Width="97" Click="btnCancel_Click"/>
+        <Button x:Name="btnUpdate" Content="Update Item" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top" Width="162" Click="btnUpdate_Click_1" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnAddNewItem" Content="Add New Item" HorizontalAlignment="Left" Margin="22,362,0,0" VerticalAlignment="Top" Width="162" Click="btnAddNewItem_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.49,1.167"/>
+        <Button x:Name="btnCloseMenu" Content="Close Menu" HorizontalAlignment="Left" Margin="22,445,0,0" VerticalAlignment="Top" Width="162" Click="btnCloseMenu_Click" Grid.ColumnSpan="2"/>
 
-        <DataGrid x:Name="Query_Data" HorizontalAlignment="Left" Height="199" Margin="35,81,0,0" VerticalAlignment="Top" Width="460"/>
+        <DataGrid x:Name="Query_Data" HorizontalAlignment="Left" Height="425" Margin="243,40,0,0" VerticalAlignment="Top" Width="384" Grid.ColumnSpan="4"/>
+        <ComboBox x:Name="cmbGetItemCode" HorizontalAlignment="Left" Margin="23,42,0,0" VerticalAlignment="Top" Width="191" RenderTransformOrigin="-0.083,-0.458" Grid.ColumnSpan="2" Height="22">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.561"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <Label x:Name="lblItemCode" Content="Click Dropdown for item codes" HorizontalAlignment="Left" Margin="21,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.033,0.08" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnCLearForm" Content="CLear Form" HorizontalAlignment="Left" Margin="22,401,0,0" VerticalAlignment="Top" Width="162" Click="btnCLearForm_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.527,3.873"/>
+        <TextBox x:Name="txtItemDesc" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="22,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+        <TextBox x:Name="txtItemCost" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="22,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+        <Label x:Name="lblItemDesc" Grid.ColumnSpan="2" Content="Item Description" HorizontalAlignment="Left" Margin="20,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.626,-0.403" Height="24" Width="112"/>
+        <Label x:Name="lblCost" Grid.ColumnSpan="2" Content="Item Cost" HorizontalAlignment="Left" Margin="22,201,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtItemCost_Copy" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="22,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+        <TextBox x:Name="txtItemCode" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="22,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+        <Label x:Name="lblItemCode1" Grid.ColumnSpan="2" Content="Item Code" HorizontalAlignment="Left" Margin="20,76,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.626,-0.403" Height="24" Width="112"/>
+        <Button x:Name="btnDeleteItem" Content="Delete Item" HorizontalAlignment="Left" Margin="22,319,0,0" VerticalAlignment="Top" Width="162" Click="btnDeleteItem_Click" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
