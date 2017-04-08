@@ -38,7 +38,7 @@ namespace CS3280_GroupProject
         /// Queries the invoice item description and pulls all of the item codes
         /// </summary>
         /// <returns></returns>
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        private void btnUpdate_Click_1(object sender, RoutedEventArgs e)
         {
             Query_Data.ItemsSource = invQueryManager.getItemData();
         }
@@ -48,7 +48,7 @@ namespace CS3280_GroupProject
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAddDelete_Click_1(object sender, RoutedEventArgs e)
+        private void btnDeleteItem_Click(object sender, RoutedEventArgs e)
         {
             // Need to add/change item description and cost
             invQueryManager.addDeleteData();
@@ -62,6 +62,36 @@ namespace CS3280_GroupProject
         {
             // close the current window and returns to previous
             this.Close();
+        }
+        
+        /// <summary>
+        /// Adds a new item to the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddNewItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Clears the form to default values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCLearForm_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Closes the windows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
