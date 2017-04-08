@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         Title="Invoice System" Height="504.011" Width="643.105" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,2,0">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="54.667" Margin="10,10,0,0" VerticalAlignment="Top" Width="613.105">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="459*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="55" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3">
             <StackPanel x:Name="pnl_GeneralControls" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="btn_New" Content="New Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_New_Click"/>
                 <Button x:Name="btn_Save" Content="Save Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_Save_Click"/>
@@ -15,7 +20,7 @@
                 <Button x:Name="btn_EditInventory" Content="Edit Inventory" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_EditInventory_Click"/>
             </StackPanel>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="56.344" Margin="10,101.667,0,0" VerticalAlignment="Top" Width="613.105">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="56" Margin="10,102,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3">
             <StackPanel x:Name="pnl_InvoiceControls" Margin="0,-1,0,0" Orientation="Horizontal">
                 <DatePicker x:Name="btn_Date" Margin="5,10,0,10" Height="25" Text="Date" CalendarClosed="btn_Date_CalendarClosed"/>
                 <Label/>
@@ -25,7 +30,7 @@
                 <Button x:Name="btn_Delete" Content="Delete Invoice" Width="95" Margin="175,15.172,0,15.172" Height="25" Background="#FFE04343" FontWeight="Bold" Click="btn_Delete_Click"/>
             </StackPanel>
         </Border>
-        <DataGrid x:Name="grid_Invoice" HorizontalAlignment="Left" Height="301" Margin="10,163.011,0,0" VerticalAlignment="Top" Width="613.105"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,69.667,0,0" TextWrapping="Wrap" Text="Invoice #0000" VerticalAlignment="Top" FontSize="18"/>
+        <DataGrid x:Name="grid_Invoice" HorizontalAlignment="Left" Height="301" Margin="10,163,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Invoice #0000" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

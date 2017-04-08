@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CS3280_GroupProject"
         mc:Ignorable="d"
-        Title="Search Invoices" Height="325.4" Width="565.675">
+        Title="Search Invoices" Height="504.011" Width="643.105" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="Btn_Clear" Content="Clear" HorizontalAlignment="Left" Margin="364.675,19.666,0,0" VerticalAlignment="Top" Width="95" Height="21.96" Click="Btn_Clear_Click"/>
-        <Button x:Name="Btn_Select" Content="Select Invoice" HorizontalAlignment="Left" Margin="464.675,19.666,0,0" VerticalAlignment="Top" Width="83" Height="21.96" Click="Btn_Select_Click" IsEnabled="False"/>
-        <ComboBox x:Name="Filter_Number" HorizontalAlignment="Left" Margin="31.675,19.666,0,0" VerticalAlignment="Top" Width="106"/>
-        <Label Content="Invoice Number" HorizontalAlignment="Left" Height="21.293" Margin="49.334,1.334,0,0" VerticalAlignment="Top" Width="67.667" FontSize="8"/>
-        <ComboBox x:Name="Filter_Date" HorizontalAlignment="Left" Margin="142.675,19.666,0,0" VerticalAlignment="Top" Width="106"/>
-        <Label Content="Invoice Date" HorizontalAlignment="Left" Height="21.293" Margin="166.668,1.334,0,0" VerticalAlignment="Top" Width="67.667" FontSize="8"/>
-        <ComboBox x:Name="Filter_Total" HorizontalAlignment="Left" Margin="253.675,19.666,0,0" VerticalAlignment="Top" Width="106"/>
-        <Label Content="Invoice Total" HorizontalAlignment="Left" Height="21.293" Margin="281.335,1.334,0,0" VerticalAlignment="Top" Width="67.667" FontSize="8"/>
-        <DataGrid x:Name="Invoice_Data" HorizontalAlignment="Left" Height="237" Margin="10,47,0,0" VerticalAlignment="Top" Width="538"/>
+        <Button x:Name="Btn_Clear" Content="Clear" HorizontalAlignment="Left" Margin="397,20,0,0" VerticalAlignment="Top" Width="95" Height="22" Click="Btn_Clear_Click"/>
+        <Button x:Name="Btn_Select" Content="Select Invoice" HorizontalAlignment="Left" Margin="497,20,0,0" VerticalAlignment="Top" Width="83" Height="22" Click="Btn_Select_Click" IsEnabled="False"/>
+        <ComboBox x:Name="Filter_Number" HorizontalAlignment="Left" Margin="64,20,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="Invoice Number" HorizontalAlignment="Left" Height="22" Margin="81,1,0,0" VerticalAlignment="Top" Width="68" FontSize="8"/>
+        <ComboBox x:Name="Filter_Date" HorizontalAlignment="Left" Margin="175,20,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="Invoice Date" HorizontalAlignment="Left" Height="22" Margin="199,1,0,0" VerticalAlignment="Top" Width="67" FontSize="8"/>
+        <ComboBox x:Name="Filter_Total" HorizontalAlignment="Left" Margin="286,20,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="Invoice Total" HorizontalAlignment="Left" Height="22" Margin="313,1,0,0" VerticalAlignment="Top" Width="68" FontSize="8"/>
+        <DataGrid x:Name="Invoice_Data" HorizontalAlignment="Left" Height="418" Margin="10,47,0,0" VerticalAlignment="Top" Width="617"/>
 
     </Grid>
 </Window>
