@@ -14,23 +14,31 @@
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="55" Margin="10,10,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3">
             <StackPanel x:Name="pnl_GeneralControls" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btn_New" Content="New Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_New_Click"/>
-                <Button x:Name="btn_Save" Content="Save Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_Save_Click"/>
+                <Button x:Name="btn_New" Content="New Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_NewInvoice_Click"/>
+                <Button x:Name="btn_Save" Content="Save Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_Save_Click" IsEnabled="False"/>
                 <Button x:Name="btn_Search" Content="Search for Invoice" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_Search_Click"/>
                 <Button x:Name="btn_EditInventory" Content="Edit Inventory" Width="100" Margin="10,10,0,10" HorizontalAlignment="Center" Click="btn_EditInventory_Click"/>
             </StackPanel>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="56" Margin="10,102,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="56" Margin="10,71,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3">
             <StackPanel x:Name="pnl_InvoiceControls" Margin="0,-1,0,0" Orientation="Horizontal">
+                <TextBlock x:Name="lb_InvoiceID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Invoice #0000" VerticalAlignment="Top" FontSize="18" Margin="5,15,15,0"/>
                 <DatePicker x:Name="btn_Date" Margin="5,10,0,10" Height="25" Text="Date" CalendarClosed="btn_Date_CalendarClosed"/>
                 <Label/>
-                <Label Content="Item:" Margin="0,15,0,10"/>
-                <ComboBox x:Name="cm_Item" Margin="0,10" Width="100" Height="25"/>
-                <Button x:Name="btn_Add" Content="Add" Width="75" Margin="5,10,0,10" Height="25" Click="btn_Add_Click"/>
-                <Button x:Name="btn_Delete" Content="Delete Invoice" Width="95" Margin="175,15.172,0,15.172" Height="25" Background="#FFE04343" FontWeight="Bold" Click="btn_Delete_Click"/>
+                <TextBlock x:Name="lb_Total" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Total $00.00" VerticalAlignment="Top" FontSize="18" Width="144" Margin="25,15,0,0"/>
+                <Button x:Name="btn_Delete" Content="Delete Invoice" Width="95" Margin="85,15,0,15" Height="25" Background="#FFE04343" FontWeight="Bold" Click="btn_Delete_Click" IsEnabled="False"/>
             </StackPanel>
         </Border>
-        <DataGrid x:Name="grid_Invoice" HorizontalAlignment="Left" Height="301" Margin="10,163,0,0" VerticalAlignment="Top" Width="613" Grid.ColumnSpan="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Invoice #0000" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="grid" HorizontalAlignment="Left" Height="322" Margin="10,132,0,0" VerticalAlignment="Top" Width="352" Grid.ColumnSpan="2" SelectionChanged="grid_SelectionChanged"/>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="301" Margin="274.293,132,0,0" VerticalAlignment="Top" Width="257" Grid.ColumnSpan="2">
+            <Label Content="Item Code:" HorizontalAlignment="Left" Margin="3,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Cost:" HorizontalAlignment="Left" Margin="4,95,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <ComboBox x:Name="cm_Item" Margin="10,48,10,228" Height="25" DropDownOpened="cm_Item_DropDownOpened" IsEnabled="False" SelectionChanged="cm_Item_SelectionChanged"/>
+            <Button x:Name="btn_Add" Content="Add" Margin="10,258,147,-21" Click="btn_Add_Click" IsEnabled="False"/>
+            <Button x:Name="btn_Edit" Content="Update Item" Margin="147,258,10,-21" IsEnabled="False" Click="btn_Edit_Click"/>
+            <TextBlock x:Name="tb_Price" HorizontalAlignment="Left" Margin="51,100,0,0" TextWrapping="Wrap" Text="No Item Selected" VerticalAlignment="Top" Width="196"/>
+            <Label Content="Item Description:" HorizontalAlignment="Left" Margin="4,139,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBlock x:Name="tb_Desc" HorizontalAlignment="Left" Margin="10,165,0,0" TextWrapping="Wrap" Text="No Item Selected" VerticalAlignment="Top" Width="237" Height="96"/>
+        </Grid>
     </Grid>
 </Window>

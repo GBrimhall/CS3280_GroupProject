@@ -58,3 +58,5 @@ C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.csproj.GenerateResource.Cache
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.exe
 C:\Users\AleYBen\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\CS3280_GroupProject.pdb
+D:\Files\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\InventoryWindow.g.cs
+D:\Files\Documents\GitHub\CS3280_GroupProject\CS3280_GroupProject\CS3280_GroupProject\obj\Debug\InventoryWindow.baml
