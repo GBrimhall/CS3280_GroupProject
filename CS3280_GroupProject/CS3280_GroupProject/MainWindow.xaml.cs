@@ -186,6 +186,8 @@ namespace CS3280_GroupProject
                 //Clear views to defaults
                 grid.ItemsSource = null;
                 btn_New.IsEnabled = true;
+                btn_Edit.IsEnabled = false;
+                btn_DeleteItem.IsEnabled = false;
             }
             catch (Exception ex)
             {
