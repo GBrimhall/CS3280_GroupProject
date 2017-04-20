@@ -297,7 +297,6 @@ namespace CS3280_GroupProject
                 }
 
                 selectedRowIndex = grid.Items.IndexOf(grid.CurrentItem);
-                Console.WriteLine(selectedRowIndex);
 
                 string[] garbage = grid.SelectedItem.ToString().Substring(9).Split('0');
                 string[] item = garbage[0].Split('-');
