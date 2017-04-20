@@ -25,7 +25,7 @@
                 <TextBlock x:Name="lb_InvoiceID" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Invoice #0000" VerticalAlignment="Top" FontSize="18" Margin="5,15,15,0"/>
                 <DatePicker x:Name="btn_Date" Margin="5,10,0,10" Height="25" Text="Date" CalendarClosed="btn_Date_CalendarClosed"/>
                 <Label/>
-                <TextBlock x:Name="lb_Total" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Total $00.00" VerticalAlignment="Top" FontSize="18" Width="144" Margin="25,15,0,0"/>
+                <TextBlock x:Name="lb_Total" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Total $0" VerticalAlignment="Top" FontSize="18" Width="144" Margin="25,15,0,0"/>
                 <Button x:Name="btn_Delete" Content="Delete Invoice" Width="95" Margin="85,15,0,15" Height="25" Background="#FFE04343" FontWeight="Bold" Click="btn_Delete_Click" IsEnabled="False"/>
             </StackPanel>
         </Border>
@@ -34,11 +34,12 @@
             <Label Content="Item Code:" HorizontalAlignment="Left" Margin="3,22,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <Label Content="Cost:" HorizontalAlignment="Left" Margin="4,95,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <ComboBox x:Name="cm_Item" Margin="10,48,10,228" Height="25" DropDownOpened="cm_Item_DropDownOpened" IsEnabled="False" SelectionChanged="cm_Item_SelectionChanged"/>
-            <Button x:Name="btn_Add" Content="Add" Margin="10,258,147,-21" Click="btn_Add_Click" IsEnabled="False"/>
-            <Button x:Name="btn_Edit" Content="Update Item" Margin="147,258,10,-21" IsEnabled="False" Click="btn_Edit_Click"/>
+            <Button x:Name="btn_Add" Content="Add" Margin="10,258,183,-21" Click="btn_Add_Click" IsEnabled="False"/>
+            <Button x:Name="btn_Edit" Content="Update Item" Margin="79,258,100,-21" IsEnabled="False" Click="btn_Edit_Click"/>
             <TextBlock x:Name="tb_Price" HorizontalAlignment="Left" Margin="51,100,0,0" TextWrapping="Wrap" Text="No Item Selected" VerticalAlignment="Top" Width="196"/>
             <Label Content="Item Description:" HorizontalAlignment="Left" Margin="4,139,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
             <TextBlock x:Name="tb_Desc" HorizontalAlignment="Left" Margin="10,165,0,0" TextWrapping="Wrap" Text="No Item Selected" VerticalAlignment="Top" Width="237" Height="96"/>
+            <Button x:Name="btn_DeleteItem" Content="Remove Item" Margin="162,258,17,-21" IsEnabled="False" Click="btn_DeleteItem_Click"/>
         </Grid>
     </Grid>
 </Window>

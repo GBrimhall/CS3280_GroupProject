@@ -85,7 +85,7 @@ namespace CS3280_GroupProject
             try
             {
                 //Delete invoice line items
-                ExecuteNonQuery(ClsQuery.deleteInvoiceItems(invoiceNum));
+                ExecuteNonQuery(ClsQuery.deleteAllInvoiceItems(invoiceNum));
 
                 //Delete Invoice
                 ExecuteNonQuery(ClsQuery.deleteInvoice(invoiceNum));
@@ -129,7 +129,7 @@ namespace CS3280_GroupProject
                 //Get Invoice Max ID from data
                 DataSet ds = ExecuteSQLStatement(ClsQuery.generateInvoiceID(), ref iRet);
                 Int32.TryParse(ds.Tables[0].Rows[0].ItemArray[0].ToString(), out mID);
-                string newID = (mID + 1).ToString();
+                string newID = (mID).ToString();
                 //return ID as string
                 return newID;
             }
@@ -231,6 +231,12 @@ namespace CS3280_GroupProject
             }
         }
 
+        /// <summary>
+        /// Updates the item in the database
+        /// </summary>
+        /// <param name="invoiceNum"></param>
+        /// <param name="itemID"></param>
+        /// <param name="lineNum"></param>
         public void updateItemInDB(string invoiceNum, string itemID, string lineNum)
         {
             try
@@ -247,15 +253,11 @@ namespace CS3280_GroupProject
         /// Removes the item from the invoice
         /// </summary>
         /// <param name="itemID">ID of the item to remove</param>
-        public void DeleteItemFromInvoice(string itemID)
+        public void DeleteItemFromInvoice(string invoiceNum, string lineItemNum)
         {
             try
             {
-                //Make connection to database
-
-                //Get item
-
-                //Remove item to invoice
+                ExecuteNonQuery(ClsQuery.deleteInvoiceItem(invoiceNum, lineItemNum));
             }
             catch (Exception ex)
             {

@@ -31,17 +31,6 @@ namespace CS3280_GroupProject
         }
 
         /// <summary>
-        /// Query for getting all invoices
-        /// </summary>
-        /// <param name="invoiceNum"></param>
-        /// <returns></returns>
-        public static string getAllInvoices(string invoiceNum)
-        {
-            return "SELECT * FROM LineItems " +
-                String.Format("WHERE InvoiceNum = {0};", invoiceNum);
-        }
-
-        /// <summary>
         /// Get all items on an invoice
         /// </summary>
         /// <param name="invoiceNum"></param>
@@ -54,11 +43,13 @@ namespace CS3280_GroupProject
                 String.Format("AND Invoices.InvoiceNum = {0};", invoiceNum);
         }
 
-        public static string getItemData(string itemCode)
-        {
-            return String.Format("SELECT * FROM ItemDesc WHERE ItemCode = '{0}';", itemCode);
-        }
-
+        /// <summary>
+        /// Updates a line item on the invoice
+        /// </summary>
+        /// <param name="invoiceNum"></param>
+        /// <param name="itemCode"></param>
+        /// <param name="lineNum"></param>
+        /// <returns></returns>
         public static string updateInvoiceItem(string invoiceNum, string itemCode, string lineNum)
         {
             return "UPDATE LineItems " +
@@ -72,10 +63,23 @@ namespace CS3280_GroupProject
         /// </summary>
         /// <param name="invoiceNum"></param>
         /// <returns></returns>
-        public static string deleteInvoiceItems(string invoiceNum)
+        public static string deleteAllInvoiceItems(string invoiceNum)
         {
             return "Delete * FROM LineItems " +
                 String.Format("WHERE InvoiceNum = {0}", invoiceNum);
+        }
+
+        /// <summary>
+        /// Deletes an item from an invoice
+        /// </summary>
+        /// <param name="invoiceNum"></param>
+        /// <param name="lineItemNum"></param>
+        /// <returns></returns>
+        public static string deleteInvoiceItem(string invoiceNum, string lineItemNum)
+        {
+            return "Delete FROM LineItems " +
+                string.Format("WHERE LineItemNum = {0} AND ", lineItemNum) +
+                string.Format("InvoiceNum = {0}", invoiceNum);
         }
 
         /// <summary>
@@ -141,6 +145,18 @@ namespace CS3280_GroupProject
         #endregion
 
         #region Search Window Queries
+
+        /// <summary>
+        /// Query for getting all invoices
+        /// </summary>
+        /// <param name="invoiceNum"></param>
+        /// <returns></returns>
+        public static string getAllInvoices(string invoiceNum)
+        {
+            return "SELECT * FROM LineItems " +
+                String.Format("WHERE InvoiceNum = {0};", invoiceNum);
+        }
+
         public static string filterDate(string invoiceDate)
         {
             return String.Format("SELECT * FROM INVOICES WHERE InvoiceDate = '{0}';",

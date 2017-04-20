@@ -47,13 +47,15 @@ namespace CS3280_GroupProject
 
                 grid.ItemsSource = null;
 
+                //Save Invoice into system
+                btn_Date.SelectedDate = DateTime.Today;
+                inManager.SaveInvoice(btn_Date.SelectedDate.Value.Date.ToShortDateString(), "0");
+
                 //Get new ID
                 newID = inManager.GenerateInvoiceID();
                 lb_InvoiceID.Text = String.Format("Invoice #{0}", newID);
-                btn_Date.SelectedDate = DateTime.Today;
 
-                //Save Invoice into system
-                inManager.SaveInvoice(btn_Date.SelectedDate.Value.Date.ToShortDateString(), "0");
+                btn_New.IsEnabled = false;
             }
             catch (Exception ex)
             {
@@ -71,6 +73,7 @@ namespace CS3280_GroupProject
             try
             {
                 controlsEnabled(false);
+                btn_New.IsEnabled = true;
             }
             catch (Exception ex)
             {
@@ -87,13 +90,21 @@ namespace CS3280_GroupProject
         /// <param name="e"></param>
         private void btn_Search_Click(object sender, RoutedEventArgs e)
         {
-            //Open Search Window
-            SearchWindow sw = new SearchWindow();
-            sw.Show();
+            try
+            {
+                //Open Search Window
+                SearchWindow sw = new SearchWindow();
+                sw.Show();
 
-            //On Search Window close check for returned invoice
+                //On Search Window close check for returned invoice
 
-            //If there is an invoice then load and enable editing of invoice
+                //If there is an invoice then load and enable editing of invoice
+                //TODO WAITING FOR GAVIN'S CODE TO BE FINISHED
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Source + ":::" + ex.Message);
+            }
         }
 
         /// <summary>
@@ -103,11 +114,18 @@ namespace CS3280_GroupProject
         /// <param name="e"></param>
         private void btn_EditInventory_Click(object sender, RoutedEventArgs e)
         {
-            // Open the inventory management window
-            InventoryWindow iw = new InventoryWindow();
-            iw.Show();
+            try
+            {
 
-            //Once inventory management window is closed update item's drop down
+                // Open the inventory management window
+                InventoryWindow iw = new InventoryWindow();
+                iw.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Source + ":::" + ex.Message);
+            }
         }
 
         /// <summary>
@@ -131,6 +149,7 @@ namespace CS3280_GroupProject
 
                     //Refresh grid
                     List<String> test = inManager.RetrieveInvoice(lb_InvoiceID.Text.Substring(9), ref invoiceDetails);
+                    lb_Total.Text = "Total $" + invoiceDetails[2].ToString();
                     grid.ItemsSource = test.Select(Item => new { Item });
 
                 }
@@ -161,11 +180,12 @@ namespace CS3280_GroupProject
                 {
                     inManager.DeleteInvoice(lb_InvoiceID.Text.Substring(9));
                     lb_InvoiceID.Text = "Invoice #0000";
-
+                    lb_Total.Text = "Total $0";
                 }
 
                 //Clear views to defaults
                 grid.ItemsSource = null;
+                btn_New.IsEnabled = true;
             }
             catch (Exception ex)
             {
@@ -188,6 +208,11 @@ namespace CS3280_GroupProject
             invoiceDate = btn_Date.SelectedDate.Value.Date.ToShortDateString();
         }
 
+        /// <summary>
+        /// Updates the items in the list each time the list is opened.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cm_Item_DropDownOpened(object sender, EventArgs e)
         {
             try
@@ -210,16 +235,28 @@ namespace CS3280_GroupProject
         /// <param name="enabled">Controls Enabled</param>
         private void controlsEnabled(bool enabled)
         {
-            //Items Menu
-            cm_Item.IsEnabled = enabled;
-            cm_Item.SelectedItem = "";
+            try
+            {
+                //Items Menu
+                cm_Item.IsEnabled = enabled;
+                cm_Item.SelectedItem = "";
 
-            //Buttons
-            btn_Add.IsEnabled = enabled;
-            btn_Save.IsEnabled = enabled;
-            btn_Delete.IsEnabled = enabled;
+                //Buttons
+                btn_Add.IsEnabled = enabled;
+                btn_Save.IsEnabled = enabled;
+                btn_Delete.IsEnabled = enabled;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Source + ":::" + ex.Message);
+            }
         }
 
+        /// <summary>
+        /// Fills labels and shows data for the item code selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cm_Item_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -243,26 +280,38 @@ namespace CS3280_GroupProject
         /// <param name="e"></param>
         private void grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cm_Item.IsEnabled == false)
-                return;
 
-            if(grid.SelectedIndex < 0)
+            try
             {
-                btn_Edit.IsEnabled = false;
+                if (cm_Item.IsEnabled == false)
+                    return;
+
+                if (grid.SelectedIndex < 0)
+                {
+                    btn_Edit.IsEnabled = false;
+                    btn_Edit.IsEnabled = true;
+                    btn_DeleteItem.IsEnabled = true;
+                    return;
+                }
+
+                selectedRowIndex = grid.Items.IndexOf(grid.CurrentItem);
+                Console.WriteLine(selectedRowIndex);
+
+                string[] garbage = grid.SelectedItem.ToString().Substring(9).Split('0');
+                string[] item = garbage[0].Split('-');
+
+                cm_Item.SelectedItem = item[0].Trim();
+                tb_Price.Text = item[2].Trim();
+                tb_Desc.Text = item[1].Trim();
+
                 btn_Edit.IsEnabled = true;
-                return;
+                btn_DeleteItem.IsEnabled = true;
             }
-
-            selectedRowIndex = grid.Items.IndexOf(grid.CurrentItem);
-
-            string[] garbage = grid.SelectedItem.ToString().Substring(9).Split('0');
-            string[] item = garbage[0].Split('-');
-
-            cm_Item.SelectedItem = item[0].Trim();
-            tb_Price.Text = item[2].Trim();
-            tb_Desc.Text = item[1].Trim();
-
-            btn_Edit.IsEnabled = true;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Source + ":::" + ex.Message);
+            }
+            
         }
         /// <summary>
         /// Edits the selected data
@@ -271,22 +320,58 @@ namespace CS3280_GroupProject
         /// <param name="e"></param>
         private void btn_Edit_Click(object sender, RoutedEventArgs e)
         {
-            if (grid.SelectedIndex < 0)
-                return;
-
-            string selectedItemCode = cm_Item.SelectedItem.ToString();
-            if (!lb_InvoiceID.Equals("Invoice #0000"))
+            try
             {
-                string invoiceNum = lb_InvoiceID.Text.Substring(9);
+                if (grid.SelectedIndex < 0)
+                    return;
 
-                inManager.updateItemInDB(invoiceNum, selectedItemCode, (selectedRowIndex + 1).ToString());
+                string selectedItemCode = cm_Item.SelectedItem.ToString();
+                if (!lb_InvoiceID.Equals("Invoice #0000"))
+                {
+                    string invoiceNum = lb_InvoiceID.Text.Substring(9);
+
+                    Console.WriteLine(selectedRowIndex);
+                    inManager.updateItemInDB(invoiceNum, selectedItemCode, (selectedRowIndex + 1).ToString());
+
+                    //Refresh grid
+                    grid.ItemsSource = null;
+                    List<String> test = inManager.RetrieveInvoice(lb_InvoiceID.Text.Substring(9), ref invoiceDetails);
+                    lb_Total.Text = "Total $" + invoiceDetails[2].ToString();
+                    grid.ItemsSource = test.Select(Item => new { Item });
+                    btn_Edit.IsEnabled = false;
+                    btn_DeleteItem.IsEnabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Source + ":::" + ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Fires the event for when item is to be deleted form the invoice
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_DeleteItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Console.WriteLine(selectedRowIndex);
+                inManager.DeleteItemFromInvoice(lb_InvoiceID.Text.Substring(9), (selectedRowIndex + 1).ToString());
 
                 //Refresh grid
                 grid.ItemsSource = null;
                 List<String> test = inManager.RetrieveInvoice(lb_InvoiceID.Text.Substring(9), ref invoiceDetails);
+                lb_Total.Text = "Total $" + invoiceDetails[2].ToString();
                 grid.ItemsSource = test.Select(Item => new { Item });
                 btn_Edit.IsEnabled = false;
-
+                btn_DeleteItem.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex);
             }
         }
     }
